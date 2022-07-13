@@ -8,7 +8,7 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   let suits = ["♦", "♥", "♠", "♣"];
-  let courtCards = ["Ace", 2, 3, 4, 5, 6, 7, 8, 9, 10, "King", "Queen", "Jack"];
+  let courtCards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "K", "Q", "J"];
 
   const generateCard = array => {
     let randomCard = Math.floor(Math.random() * array.length);
@@ -23,4 +23,31 @@ window.onload = function() {
   right.innerHTML = resultRandomSuit;
   left.innerHTML = resultRandomSuit;
   randomCourt.innerHTML = generateCard(courtCards);
+
+  function colorRight() {
+    if (resultRandomSuit === "♦") {
+      right.classList.add("diamond");
+    } else if (resultRandomSuit === "♥") {
+      right.classList.add("heart");
+    } else if (resultRandomSuit === "♠") {
+      right.classList.add("spade");
+    } else {
+      right.classList.add("club");
+    }
+  }
+
+  function colorLeft() {
+    if (resultRandomSuit === "♦") {
+      left.classList.add("diamond");
+    } else if (resultRandomSuit === "♥") {
+      left.classList.add("heart");
+    } else if (resultRandomSuit === "♠") {
+      left.classList.add("spade");
+    } else {
+      left.classList.add("club");
+    }
+  }
+
+  let emoji1 = resultRandomSuit + colorRight();
+  let emoji2 = resultRandomSuit + colorLeft();
 };
