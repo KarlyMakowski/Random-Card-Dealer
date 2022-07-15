@@ -42,3 +42,14 @@ body {
 .spade {
   color: black;
 }
+
+#refresh {
+  background-color: lightgreen;
+  color: red;
+  border-radius: 10px;
+  margin-left: 35px;
+}
+
+#refresh:hover {
+  background-color: aquamarine;
+}

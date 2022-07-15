@@ -8,7 +8,7 @@ import "./assets/img/4geeks.ico";
 window.onload = function() {
   //write your code here
   let suits = ["♦", "♥", "♠", "♣"];
-  let courtCards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "K", "Q", "J"];
+  let courtCards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "♚", "♛", "J"];
 
   const generateCard = array => {
     let randomCard = Math.floor(Math.random() * array.length);
@@ -51,3 +51,10 @@ window.onload = function() {
   let emoji1 = resultRandomSuit + colorRight();
   let emoji2 = resultRandomSuit + colorLeft();
 };
+
+// Agrega un botón que genere una nueva carta cuando sea apretado
+
+let refreshCard = document.getElementById("refresh");
+refreshCard.addEventListener("click", () => {
+  location.reload();
+});
