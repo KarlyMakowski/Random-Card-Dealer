@@ -52,9 +52,15 @@ window.onload = function() {
   let emoji2 = resultRandomSuit + colorLeft();
 };
 
-// Agrega un botón que genere una nueva carta cuando sea apretado
+// Agregar un botón que genere una nueva carta cuando sea apretado
 
 let refreshCard = document.getElementById("refresh");
 refreshCard.addEventListener("click", () => {
   location.reload();
 });
+
+// Agregar un timer que genere una nueva carta automaticamente cada 10 segundos
+
+setTimeout(function() {
+  window.location.reload();
+}, 10000);
